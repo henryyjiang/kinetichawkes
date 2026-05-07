@@ -120,7 +120,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    fetch('/sim_data.jsonl')
+    fetch(import.meta.env.BASE_URL + 'sim_data.jsonl')
       .then(r => r.text()).then(ingest)
       .catch(() => setLoading(false))
   }, [ingest])
@@ -135,7 +135,7 @@ export default function App() {
     // Poll the growing output file for live Hawkes events during sim run
     pollRef.current = setInterval(async () => {
       try {
-        const text = await fetch(`/sim_data.jsonl?t=${Date.now()}`).then(r => r.text())
+        const text = await fetch(`${import.meta.env.BASE_URL}sim_data.jsonl?t=${Date.now()}`).then(r => r.text())
         setLiveHawkes(parseSimData(text).hawkes)
       } catch { /* file not ready yet */ }
     }, 600)
@@ -155,6 +155,11 @@ export default function App() {
           min_fill_prob:     minFillProb,
           default_size:      ordSize,
         },
+      }
+      // /api/run is only available when running locally with the C++ backend.
+      // On GitHub Pages (BASE_URL !== '/') we show a static demo notice instead.
+      if (import.meta.env.BASE_URL !== '/') {
+        throw new Error('live re-simulation requires running locally — see README')
       }
       const r = await fetch('/api/run', {
         method: 'POST',
