@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/data.ts","./src/main.tsx","./src/plotly.d.ts","./src/types.ts","./src/components/filedropzone.tsx","./src/components/plot3d.tsx","./src/components/statcard.tsx","./src/pages/bookreplay.tsx","./src/pages/fillanalytics.tsx","./src/pages/hawkesview.tsx","./src/pages/kineticsurface.tsx","./src/pages/pnlstats.tsx"],"version":"5.9.3"}

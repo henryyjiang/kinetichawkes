@@ -1,0 +1,60 @@
+{
+  "instrument": "MSFT",
+  "dataset": "XNAS.ITCH",
+  "calibration_period": "Week 1: 2024-03-04 to 2024-03-08",
+  "cancel_subsample": "1/15",
+  "buy": {
+    "mu": 0.4976978913926123,
+    "alpha": 928.3897977902539,
+    "beta": 1856.5891265416074,
+    "branching_ratio": 0.5000512954202353,
+    "stationary": true,
+    "E_lambda": 0.995497911752678,
+    "n_events": 165929,
+    "T_seconds": 135239.07012319565,
+    "mean_rate_ev_s": 1.226930944207524
+  },
+  "sell": {
+    "mu": 0.5394246357452892,
+    "alpha": 3247.393140710201,
+    "beta": 3565.0758382923336,
+    "branching_ratio": 0.9108903395069704,
+    "stationary": true,
+    "E_lambda": 6.05349221129043,
+    "n_events": 194645,
+    "T_seconds": 135239.07012319565,
+    "mean_rate_ev_s": 1.4392660332749159
+  },
+  "cancel": {
+    "mu": 3.7814915972021597,
+    "alpha": 35.31559277914742,
+    "beta": 67.73026525811643,
+    "branching_ratio": 0.521415243902583,
+    "stationary": true,
+    "E_lambda": 7.9014041902171,
+    "n_events": 915777,
+    "T_seconds": 135239.07012319565,
+    "mean_rate_ev_s": 6.77154167923349
+  },
+  "kinetic": {
+    "beta0": 4.213046033666306,
+    "beta1": -4.152569969367018,
+    "beta2": -2.2688694418755877,
+    "beta3": 1.9817581483274604,
+    "model": "logistic: P = sigmoid(beta0 + beta1*frac + beta2*log(Q) + beta3*frac*log(Q))",
+    "fit_day": "2024-03-04",
+    "n_filled": 51864,
+    "n_cancelled": 1569820,
+    "n_front_of_queue": 466884
+  },
+  "strategy": {
+    "gamma_as":          0.05,
+    "base_spread":       10000000,
+    "k_hawkes":          1000000.0,
+    "max_half_spread":   200000000,
+    "max_inventory":     150,
+    "inv_one_side_frac": 0.40,
+    "min_fill_prob":     0.001,
+    "default_size":      100
+  }
+}

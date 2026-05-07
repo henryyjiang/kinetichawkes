@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+}
+
+body {
+  margin: 0;
+  background: #0d0d0d;
+  color: #c8c8c8;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; }
+
+/* Height utilities used by Plot3D */
+.h-full { height: 100%; }
+.h-64   { height: 16rem; }
+.h-96   { height: 24rem; }
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 2px;
+  background: #222;
+  outline: none;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 9px;
+  height: 9px;
+  background: #0f0;
+  cursor: pointer;
+  border: none;
+}
+input[type='range']::-moz-range-thumb {
+  width: 9px;
+  height: 9px;
+  background: #0f0;
+  cursor: pointer;
+  border: none;
+}
+
+/* Recharts */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line { stroke: #1a1a1a; }
+.recharts-text { fill: #444 !important; font-size: 11px !important; font-family: 'Roboto', sans-serif !important; }
+.recharts-legend-item-text { color: #555 !important; font-size: 11px !important; font-family: 'Roboto', sans-serif !important; }
+.recharts-tooltip-wrapper { outline: none; }

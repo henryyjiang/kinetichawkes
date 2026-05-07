@@ -1,0 +1,27 @@
+# ── Build output ──────────────────────────────────────────────────────────────
+hawkes-hft/build/
+gui/dist/
+
+# ── Node ──────────────────────────────────────────────────────────────────────
+gui/node_modules/
+gui/.vite/
+
+# ── Claude Code framework files ───────────────────────────────────────────────
+.claude/
+.claire/
+
+# ── Large binary data files (use LFS or keep locally) ────────────────────────
+data/*.dbn
+data/*.parquet
+
+# ── Python / notebooks ────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/
+*.swp
