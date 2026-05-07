@@ -6,6 +6,7 @@ import { join } from 'path'
 import { tmpdir } from 'os'
 
 export default defineConfig({
+  base: '/kinetichawkes/',
   plugins: [
     react(),
     {
